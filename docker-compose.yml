@@ -1,0 +1,8 @@
+version: '3.6'
+services:
+  ruby:
+    build: ruby
+    ports:
+      - '7658:7658'
+    volumes:
+      - /Users/${USER}:/Users/${USER}
