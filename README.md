@@ -70,3 +70,5 @@ let g:ale_bash_lsp_address = 'default:7661'
 ```
 
 ## VS Code
+
+## Atom
