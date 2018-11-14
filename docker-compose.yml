@@ -2,7 +2,36 @@ version: '3.6'
 services:
   ruby:
     build: ruby
+    restart: unless-stopped
     ports:
       - '7658:7658'
     volumes:
       - /Users/${USER}:/Users/${USER}
+
+  elixir:
+    build: elixir
+    restart: unless-stopped
+    ports:
+      - '7659:7659'
+    volumes:
+      - /Users/${USER}:/Users/${USER}
+      - elixir_config:/root/.elixir_ls
+
+  elm:
+    build: elm
+    restart: unless-stopped
+    ports:
+      - '7660:7660'
+    volumes:
+      - /Users/${USER}:/Users/${USER}
+
+  bash:
+    build: bash
+    restart: unless-stopped
+    ports:
+      - '7661:7661'
+    volumes:
+      - /Users/${USER}:/Users/${USER}
+
+volumes:
+  elixir_config:
