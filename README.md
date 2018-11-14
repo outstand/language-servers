@@ -2,6 +2,8 @@
 
 ```
 docker-compose up -d
+# or internally
+dev up -d
 ```
 
 # Editor Config
